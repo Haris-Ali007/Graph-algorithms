@@ -1,4 +1,4 @@
-from Graphs import Graph
+from Graphs import create_test_graph
 
 
 class DFS:
@@ -11,7 +11,6 @@ class DFS:
             return
         self.visited.append(node)
         neighbours = node.neighbours
-        print(node.data, end=' ')
         for next in neighbours:
             self.dfs(next)
         
@@ -20,13 +19,7 @@ class DFS:
 
 
 if __name__=="__main__":
-    g = Graph()
-    g.add_node(0, 1)
-    g.add_node(1, 2)
-    g.add_node(2, 3)
-    g.add_node(3, 4)
-    g.add_node(3, 5)
-    g.add_node(5, 6)
-
-    d = DFS(g)
-    d.run_dfs(3)
+    test_graph = create_test_graph()
+    dfs = DFS(test_graph)
+    dfs.run_dfs(3)
+    dfs.visited

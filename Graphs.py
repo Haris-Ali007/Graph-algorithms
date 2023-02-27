@@ -37,13 +37,18 @@ class Graph:
             print(f"Edges: {node_edges}")
 
 
-if __name__=="__main__":
-    
+def create_test_graph():
     g = Graph()
     g.add_node(0, 1)
     g.add_node(1, 2)
     g.add_node(2, 3)
     g.add_node(3, 4)
     g.add_node(3, 5)    
-    g.print_edges(3)
-    g.print_graph()
+    return g    
+
+
+if __name__=="__main__":
+    
+    dummy_graph = create_test_graph()
+    dummy_graph.print_edges(3)
+    dummy_graph.print_graph()
