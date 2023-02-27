@@ -5,7 +5,6 @@ class DFS:
     def __init__(self, graph):
         self.graph = graph
         self.visited = []
-        self.topology = []
     
     def dfs(self, node):
         if node in self.visited:
