@@ -5,11 +5,11 @@ class BFS():
 
     def __init__(self, graph):
         self.graph = graph
-        
+    
     def bfs(self):
         q = Queue()
         visited = []
-        parents = []
+        parent = [None] * len(graph.nodes)
         seen = set([graph.nodes[self.start_node]])            
         q.put(graph.nodes[self.start_node])
 
@@ -23,12 +23,22 @@ class BFS():
                     if each_node not in seen:
                         seen.add(each_node)
                         q.put(each_node)
-
+                        parent[each_node.data] = data 
+        return parent
+    
     def shortest_path(self, start_node, end_node):
         self.start_node = start_node
         self.end_node = end_node
-        self.bfs()
-
+        parent = self.bfs()
+        shortest_path = [end_node]
+        while True:
+            parent_node = parent[end_node]
+            if parent_node != None:
+                shortest_path.append(parent_node)
+                end_node = parent_node
+            else:
+                break
+        return list(reversed(shortest_path))
 
 
 if __name__=="__main__":
@@ -47,5 +57,7 @@ if __name__=="__main__":
     graph.add_node(4, 3)    
     graph.print_graph()
 
+    bfsObj = BFS(graph)
+    bfsObj.shortest_path(0, 7)
     
     
