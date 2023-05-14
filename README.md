@@ -57,16 +57,8 @@ The DFS algorithm is a recursive algorithm that traverses the graph depth-first,
 
 ## Breadth First Search
 
-The BFS algorithm is an iterative algorithm that traverses the graph breadth-first, visiting all the nodes at a given depth before moving on to the next level. In this project, the BFS algorithm is implemented in the `bfs.py` file using a queue to keep track of the nodes to be visited.
+The BFS algorithm is an iterative algorithm that traverses the graph breadth-first, visiting all the nodes at a given depth before moving on to the next level. In this way, BFS can be used to find the shortest path between any two nodes of an unweighted graph.
+In this project, the BFS algorithm is implemented in the `bfs.py` file using a queue to keep track of the nodes to be visited.
 
 ## Examples and Demos
 
-To see the DFS and BFS algorithms in action, you can run the `examples.py` file. This file contains examples of how to create a graph and use the DFS and BFS algorithms to find paths between nodes.
-
-## Contribution Guidelines
-
-If you'd like to contribute to this project, please fork the repository and create a new branch for your changes. Once you've made your changes, create a pull request to have your changes reviewed and merged into the main branch.
-
-## License
-
-This project is released under the MIT License. See the `LICENSE` file for more information.
